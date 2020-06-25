@@ -1,8 +1,3 @@
-# install the required packages if you don"t alreadyy have them
-#
-# install.packages(c("ggplot2", "magrittr", "reshape2", "optparse"),
-#                  repos="https://cloud.r-project.org/")
-
 suppressPackageStartupMessages(
     {
         library(ggplot2)
@@ -164,18 +159,3 @@ main <- function() {
 
 }
 main()
-
-# 
-# df <- stats_df(goeburst)
-# 
-# m <- melt(df, id.vars = "Threshold")
-# tiff(filename="campy_stability.tiff",
-#      res = 600,
-#      width = 600 * 8.5,
-#      height = 600 * 5)
-# ggplot(m, aes(x = Threshold, y = value)) +
-#     geom_step() +
-#     facet_grid(variable ~ ., scales = "free_y", switch = "y") +
-#     labs(x = "goeBURST Threshold", y = "")
-# 
-# dev.off()
