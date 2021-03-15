@@ -1,9 +1,16 @@
 suppressPackageStartupMessages(
     {
-        library(ggplot2)
-        library(magrittr)
-        library(reshape2)
-        library(optparse)
+        usePackage <- function(p) {
+            if (!is.element(p, installed.packages()[,1])) 
+                install.packages(p, dep = TRUE)
+            library(p, character.only = TRUE)
+        }
+        
+        usePackage("ggplot2")
+        usePackage("magrittr")
+        usePackage("reshape2")
+        usePackage("optparse")
+        
         source("wallace.R")
     }
 )
