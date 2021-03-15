@@ -11,7 +11,7 @@ suppressPackageStartupMessages(
         usePackage("reshape2")
         usePackage("optparse")
         
-        source("wallace.R")
+        source("D:/Dropbox (Personal)/GitHub/nAWC/wallace.R")
     }
 )
 
