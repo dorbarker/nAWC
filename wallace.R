@@ -126,20 +126,20 @@ adj_wallace <- function(clusters_A, clusters_B)
     
     sum_row_2 <- sum_row[sum_row > 1]
     sum_col_2 <- sum_col[sum_col > 1]
-    csumFc2 <- colSums(sweep(ct[,names(sum_col_2)], 2, sum_col_2, FUN=function(x,y){(x/y)^2}))
+    csumFc2 <- colSums(sweep(ct[,names(sum_col_2), drop = FALSE], 2, sum_col_2, FUN=function(x,y){(x/y)^2}))
     # print("csumFc2")
     # print(csumFc2)
-    csumFc3 <- colSums(sweep(ct[,names(sum_col_2)], 2, sum_col_2, FUN=function(x,y){(x/y)^3}))
+    csumFc3 <- colSums(sweep(ct[,names(sum_col_2), drop = FALSE], 2, sum_col_2, FUN=function(x,y){(x/y)^3}))
     # print('csumFc3')
     # print(csumFc3)
     
     # print('names(sum_row_2)')
     # print(names(sum_row_2))
     
-    rsumFc2 <- rowSums(sweep(ct[names(sum_row_2),], 1, sum_row_2, FUN=function(x,y){(x/y)^2}))
+    rsumFc2 <- rowSums(sweep(ct[names(sum_row_2), , drop = FALSE], 1, sum_row_2, FUN=function(x,y){(x/y)^2}))
     # print('rsumFc2')
     # print(rsumFc2)
-    rsumFc3 <- rowSums(sweep(ct[names(sum_row_2),], 1, sum_row_2, FUN=function(x,y){(x/y)^3}))
+    rsumFc3 <- rowSums(sweep(ct[names(sum_row_2), , drop = FALSE], 1, sum_row_2, FUN=function(x,y){(x/y)^3}))
     # print('rsumFc3')
     # print(rsumFc3)
     
